@@ -2,7 +2,7 @@
 import socket
 import time
 
-var battery = ok
+var battery = 100
 
 # IP and port of Tello
 tello_address = ('192.168.10.1', 8889)
@@ -45,15 +45,18 @@ send("battery?")
 # Receive battery response from Tello
 receive()
 
-if battery = no 
+if battery = 20
 
-then land
+then emergency
+print("plz replace battery")
 
 
 time.sleep(1)
 
 send("takeoff")
 time.sleep(5)
+
+send("forward 20")
 
 send("land")
 time.sleep(10)
