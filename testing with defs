@@ -3,6 +3,9 @@ import socket
 import time
 
 var battery = 100
+var baro = 00
+var time = 00
+var
 
 # IP and port of Tello
 tello_address = ('192.168.10.1', 8889)
@@ -49,7 +52,7 @@ send("baro?")
 
 # Receive battery response from Tello
 receive()
-
+baro = receive
 if baro == range(100-110)
  break 
   back 20
@@ -60,7 +63,7 @@ send("time?")
 
 # Receive battery response from Tello
 receive()
-
+time = recive
 if time == 180
  break 
   back 20
@@ -81,7 +84,7 @@ send("battery?")
 
 # Receive battery response from Tello
 receive()
-
+battery = receive
 if battery = 20
 
 then emergency
