@@ -95,6 +95,80 @@ time.sleep(5)
 
 def.check
 
+send("left 30")
+time.sleep(1)
+def.check
+
+send("right 20")
+time.sleep(1)
+def.check
+
+send("forward 34")
+def.check
+time.sleep(1)
+send("ccw 900")
+time.sleep(1)
+def.check
+send("up 30")
+time.sleep(1)
+def.check
+send("down 24")
+time.sleep(1)
+def.check
+send("forward 20")
+time.sleep(1)
+def.check
+send("up 20")
+send("down 26")
+time.sleep(1)
+send("forward 30")
+def.check
+time.sleep(1)
+send("up 30")
+def.check
+send("down 11")
+time.sleep(1)
+def.check
+send("cw 900")
+time.sleep(1)
+def.check
+send("forward 30")
+time.sleep(1) 
+def.check
+send("cw 900")
+time.sleep(1)
+def.check
+send("up 30")
+send("down 26")
+def.check
+time.sleep(1)
+send("forward 30")
+def.check
+time.sleep(1)
+send("cw 900")
+def.check
+time.sleep(1)
+send("forward 20")
+def.check
+time.sleep(1)
+send("up 30")
+def.check
+send("down 20")
+time.sleep(1)
+def.check
+send("forward 20")
+time.sleep(1)
+def.check
+send("ccw 900")
+time.sleep(1)
+def.check
+send("down 25")
+time.sleep(1)
+def.check
+send("forward 20")
+time.sleep(1)
+def.check
+
 send("forward 400")
 time.sleep(2)
 
