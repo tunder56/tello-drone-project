@@ -95,7 +95,49 @@ time.sleep(5)
 
 def.check
 
-send("forward 20")
+send("forward 400")
+time.sleep(2)
+
+def.check
+
+send("up 160")
+time.sleep(1)
+
+def.check
+
+send("cw 50")
+time.sleep(1)
+
+def.check
+
+send("forward 500")
+time.sleep(2)
+
+def.check
+
+send("cw 200")
+time.sleep(1)
+
+send("down 150")
+time.sleep(2)
+
+def.check
+
+send("forward 300")
+send("cw 300")
+send("up 10")
+time.sleep(2)
+
+def.check
+
+send("forward 200")
+send("cw 400")
+time.sleep(2)
+
+def.check
+
+send("back 200")
+send("cw 200")
 
 send("land")
 time.sleep(10)
