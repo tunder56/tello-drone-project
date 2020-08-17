@@ -1,0 +1,72 @@
+import socket
+import time
+
+def send(message):
+  try:
+    sock.sendto(message.encode(), tello_address)
+    print("Sending message: " + message)
+  except Exception as e:
+    print("Error sending: " + str(e))
+	
+def receive():
+  try:
+    response, ip_address = sock.recvfrom(128)
+    print("Received message: " + response.decode(encoding='utf-8') + " from Tello with IP: " + str(ip_address))
+  except Exception as e:
+    print("Error receiving: " + str(e))
+
+
+send("command")
+time.sleep(1)
+send("takeoff")
+time.sleep(1)
+send("left 30")
+time.sleep(1)
+send("right 20")
+time.sleep(1)
+send("forward 34")
+time.sleep(1)
+send("ccw 900")
+time.sleep(1)
+send("up 30")
+time.sleep(1)
+send("down 24")
+time.sleep(1)
+send("forward 20")
+time.sleep(1)
+send("up 20")
+send("down 26")
+time.sleep(1)
+send("forward 30")
+time.sleep(1)
+send("up 30")
+send("down 11")
+time.sleep(1)
+send("cw 900")
+time.sleep(1)
+send("forward 30")
+time.sleep(1) 
+send("cw 900")
+time.sleep(1)
+send("up 30")
+send("down 26")
+time.sleep(1)
+send("forward 30")
+time.sleep(1)
+send("cw 900")
+time.sleep(1)
+send("forward 20")
+time.sleep(1)
+send("up 30")
+send("down 20")
+time.sleep(1)
+send("forward 20")
+time.sleep(1)
+send("ccw 900")
+time.sleep(1)
+send("down 25")
+time.sleep(1)
+send("forward 20")
+time.sleep(1)
+
+
