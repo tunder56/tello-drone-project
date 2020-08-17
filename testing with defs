@@ -29,6 +29,43 @@ def receive():
   except Exception as e:
     print("Error receiving: " + str(e))
 
+def check
+ # Ask Tello about battery status
+send("battery?")
+
+# Receive battery response from Tello
+receive()
+
+if battery == 20
+
+then 
+break
+emergency
+print("plz replace battery")   
+
+
+# Ask Tello about battery status
+send("baro?")
+
+# Receive battery response from Tello
+receive()
+
+if baro == 100
+ break 
+  back 20
+  land 
+  
+  # Ask Tello about battery status
+send("time?")
+
+# Receive battery response from Tello
+receive()
+
+if time == 180
+ break 
+  back 20
+  land 
+
 
 # Send Tello into command mode
 send("command")
@@ -55,6 +92,8 @@ time.sleep(1)
 
 send("takeoff")
 time.sleep(5)
+
+def.check
 
 send("forward 20")
 
