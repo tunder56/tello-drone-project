@@ -208,13 +208,29 @@ send("forward 200")
 send("cw 400")
 time.sleep(2)
 
+send("up 210")
+time.sleep(1)
+
 def.check
 
 send("back 200")
 send("cw 200")
 
+
+def.check
+
+send("cw 50")
+time.sleep(1)
+
+def.check
+
+send("down 195")
+send("forward 500")
+time.sleep(2)
+
 send("land")
 time.sleep(10)
+
 
 # Close the UDP socket
 sock.close()
