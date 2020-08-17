@@ -50,7 +50,7 @@ send("baro?")
 # Receive battery response from Tello
 receive()
 
-if baro == 100
+if baro == range(100-110)
  break 
   back 20
   land 
