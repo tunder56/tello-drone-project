@@ -5,7 +5,7 @@ import time
 var battery = 100
 var baro = 00
 var time = 00
-var
+var recive = 00
 
 # IP and port of Tello
 tello_address = ('192.168.10.1', 8889)
@@ -38,7 +38,7 @@ send("battery?")
 
 # Receive battery response from Tello
 receive()
-
+var battery = receive
 if battery == 20
 
 then 
@@ -52,7 +52,7 @@ send("baro?")
 
 # Receive battery response from Tello
 receive()
-baro = receive
+var baro = receive
 if baro == range(100-110)
  break 
   back 20
@@ -63,7 +63,7 @@ send("time?")
 
 # Receive battery response from Tello
 receive()
-time = recive
+var time = recive
 if time == 180
  break 
   back 20
