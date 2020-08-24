@@ -84,15 +84,18 @@ send("battery?")
 
 # Receive battery response from Tello
 receive()
-battery = receive
-if battery = 20
+//battery = receive
+//if battery = 20
 
-then emergency
-print("plz replace battery")
+//then emergency
+//print("plz replace battery")
 
 
 time.sleep(1)
 
+
+
+def flight plan
 send("takeoff")
 time.sleep(5)
 
@@ -234,6 +237,8 @@ time.sleep(2)
 send("land")
 time.sleep(10)
 
+
+def.flightplan
 
 # Close the UDP socket
 sock.close()
