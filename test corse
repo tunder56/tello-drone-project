@@ -3,11 +3,11 @@ import socket
 import time
 
 
-bolean checkree = true
-var battery = 100
-var baro = 00
-var time = 00
-var recive = 00
+checkre = true
+battery = 100
+baro = 00
+time = 00
+recive = 00
 
 # IP and port of Tello
 tello_address = ('192.168.10.1', 8889)
@@ -34,7 +34,7 @@ def receive():
   except Exception as e:
     print("Error receiving: " + str(e))
 
-def check
+def check ():
  # Ask Tello about battery status
 send("battery?")
 
@@ -97,7 +97,7 @@ time.sleep(1)
 
 
 
-def flight plan
+def flight_plan():
 send("takeoff")
 time.sleep(2)
 send("forward 335")
@@ -109,6 +109,6 @@ time.sleep(2)
 send("land")
 
 
-def.flightplan
+flight_plan()
 while (bool checkree = true)
-def.check
+check()
