@@ -57,13 +57,13 @@ time.sleep(1)
 
 
 send("takeoff")
-time.sleep(2)
+time.sleep(3)
 send("forward 335")
-time.sleep(2)
+time.sleep(17)
 send("ccw 90")
-time.sleep(2)
+time.sleep(5)
 send ("forward 275")
-time.sleep(2)
+time.sleep(10)
 send("land")
 
 
