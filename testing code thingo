@@ -53,63 +53,39 @@ while flightplan = true
 
 def background():
     while True:
-     # Ask Tello about battery status
-send("battery?")
-
-# Receive battery response from Tello
-receive()
-
-if battery == 20
-
-then 
-break
-emergency
-print("plz replace battery")   
-
-
-# Ask Tello about battery status
-send("baro?")
-
-# Receive battery response from Tello
-receive()
-
-if baro == 100
- break 
-  back 20
-  land 
-  
-  # Ask Tello about battery status
-send("time?")
-
-# Receive battery response from Tello
-receive()
-
-if time == 180
- break 
-  back 20
-  land 
-  
+      # Ask Tello about battery status
+      send("battery?")
+      # Receive battery response from Tello
+      receive()
+      send("baro?")
+      receive()
+      send("time?")
+      receive()
+      if battery == 20
+        send("land")
+        print("plz replace battery")   
+        break
+      if baro == 100
+        send("land")
+        break 
+      if time == 180
+        break 
+        send("land")
+        
+        
 def foreground():
     # What you want to run in the foreground
-
-b = threading.Thread(name='background', target=background)
-f = threading.Thread(name='foreground', target=foreground)
-
-b.start()
-f.start()
-
-print("flight plan non nomanal")
-
-
-time.sleep(1)
-
-send("takeoff")
-time.sleep(5)
-
-send("forward 20")
-
-send("land")
-time.sleep(10)
+    b = threading.Thread(name='background', target=background)
+    f = threading.Thread(name='foreground', target=foreground)
+    b.start()
+    f.start()
+    print("flight plan non nomanal")
+    time.sleep(1)
+    send("takeoff")
+    time.sleep(5)
+    send("forward 20")
+    send("land")
+    time.sleep(10)
 
 # Close the UDP socket
 sock.close()
