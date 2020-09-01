@@ -1,0 +1,72 @@
+# Import the built-in socket and time modules
+import socket
+import time
+
+
+# IP and port of Tello
+tello_address = ('192.168.10.1', 8889)
+
+# Create a UDP connection that we'll send the command to
+sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+
+# Let's be explicit and bind to a local port on our machine where Tello can send messages
+sock.bind(('192.168.10.2', 9000))
+
+# Function to send messages to Tello
+def send(message):
+  try:
+    sock.sendto(message.encode(), tello_address)
+    print("Sending message: " + message)
+  except Exception as e:
+    print("Error sending: " + str(e))
+
+# Function that listens for messages from Tello and prints them to the screen
+def receive():
+  try:
+    response, ip_address = sock.recvfrom(128)
+    print("Received message: " + response.decode(encoding='utf-8') + " from Tello with IP: " + str(ip_address))
+  except Exception as e:
+    print("Error receiving: " + str(e))
+
+
+
+
+# Send Tello into command mode
+send("command")
+
+# Receive response from Tello
+receive()
+
+# Delay 3 seconds before we send the next command
+time.sleep(1)
+
+# Ask Tello about battery status
+send("battery?")
+
+# Receive battery response from Tello
+receive()
+
+time.sleep(1)
+
+send("speed 50")
+
+send("takeoff")
+time.sleep(4)
+
+send("down 40")
+time.sleep(6)
+
+send("forward 370")
+time.sleep(8.5)
+
+send("cw 90")
+time.sleep(2)
+
+send("forward 280")
+time.sleep(6.5)
+
+
+send("land")
+
+# Close the UDP socket
+sock.close()
