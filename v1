@@ -51,20 +51,13 @@ time.sleep(1)
 send("speed 50")
 
 send("takeoff")
-time.sleep(4)
+time.sleep(5)
 
-send("down 40")
+send("down 90")
+time.sleep(8)
+
+send("forward 285")
 time.sleep(6)
-
-send("forward 370")
-time.sleep(8.5)
-
-send("cw 90")
-time.sleep(2)
-
-send("forward 280")
-time.sleep(6.5)
-
 
 send("land")
 
